@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "strayechoes",
+	"version": "${version}",
+	"name": "Echoes of the Stray",
+	"description": "An advanced Minecraft mod inspired by Bungo Stray Dogs!",
+	"authors": [
+		"Akira!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/strayechoes/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"akira.strayechoes.EchoesOfTheStray"
+		],
+		"fabric-datagen": [
+			"akira.strayechoes.EchoesOfTheStrayDataGenerator"
+		],
+		"client": [
+			"akira.strayechoes.EchoesOfTheStrayClient"
+		]
+	},
+	"mixins": [
+		"strayechoes.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
