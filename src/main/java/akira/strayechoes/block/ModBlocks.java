@@ -17,7 +17,13 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(5f).requiresTool().sounds(BlockSoundGroup.METAL)));
 
     public static final Block RAW_LUNITE_BLOCK = registerBlock("raw_lunite_block",
-            new Block(AbstractBlock.Settings.create().strength(5f).requiresTool().sounds(BlockSoundGroup.METAL)));
+            new Block(AbstractBlock.Settings.create().strength(5f).requiresTool().sounds(BlockSoundGroup.STONE)));
+
+    public static final Block LUNITE_ORE = registerBlock("lunite_ore",
+            new Block(AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)));
+
+    public static final Block DEEPSLATE_LUNITE_ORE = registerBlock("deepslate_lunite_ore",
+            new Block(AbstractBlock.Settings.create().strength(4.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -35,7 +41,13 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS)
                 .register(entries -> {
                     entries.add(ModBlocks.LUNITE_BLOCK);
+                });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL)
+                .register(entries -> {
                     entries.add(ModBlocks.RAW_LUNITE_BLOCK);
+                    entries.add(ModBlocks.LUNITE_ORE);
+                    entries.add(ModBlocks.DEEPSLATE_LUNITE_ORE);
                 });
     }
 }

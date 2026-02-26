@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "strayechoes:block/deepslate_lunite_ore"
+  }
+}

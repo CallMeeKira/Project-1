@@ -1,7 +1,12 @@
 {
   "item.strayechoes.lunite_ingot": "Lunite Ingot",
   "item.strayechoes.raw_lunite": "Raw Lunite",
+  "item.strayechoes.lunite_nugget": "Lunite Nugget",
 
   "block.strayechoes.lunite_block": "Block of Lunite",
-  "block.strayechoes.raw_lunite_block": "Block of Raw Lunite"
+  "block.strayechoes.raw_lunite_block": "Block of Raw Lunite",
+  "block.strayechoes.lunite_ore": "Lunite Ore",
+  "block.strayechoes.deepslate_lunite_ore": "Deepslate Lunite Ore",
+
+  "itemgroup.strayechoes.echoes_of_the_stray": "Echoes of the Stray"
 }
