@@ -1,5 +1,6 @@
 package akira.strayechoes;
 
+import akira.strayechoes.block.ModBlocks;
 import akira.strayechoes.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -14,5 +15,6 @@ public class EchoesOfTheStray implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
