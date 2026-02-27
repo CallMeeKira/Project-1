@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "lunite_ingot",
+  "ingredient": {
+    "item": "strayechoes:deepslate_lunite_ore"
+  },
+  "result": {
+    "id": "strayechoes:lunite_ingot"
+  }
+}

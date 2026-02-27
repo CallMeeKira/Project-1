@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "lunite_ingot",
+  "ingredient": {
+    "item": "strayechoes:raw_lunite"
+  },
+  "result": {
+    "id": "strayechoes:lunite_ingot"
+  }
+}
