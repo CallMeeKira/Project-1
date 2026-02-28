@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "Echoes_Of_The_Stray_Group",
+  "ingredient": {
+    "item": "strayechoes:lunite_ore"
+  },
+  "result": {
+    "id": "strayechoes:lunite_ingot"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "strayechoes:block/raw_lunite_block"
+  }
+}

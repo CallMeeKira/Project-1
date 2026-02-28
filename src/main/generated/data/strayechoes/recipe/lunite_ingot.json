@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "strayechoes:lunite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "strayechoes:lunite_ingot"
+  }
+}
