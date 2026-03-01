@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "strayechoes:item/lunite/lunite_chestplate"
+  }
+}
