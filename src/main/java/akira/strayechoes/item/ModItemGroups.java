@@ -20,12 +20,19 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_LUNITE);
                         entries.add(ModItems.LUNITE_NUGGET);
 
+                        entries.add(ModItems.LUNITE_HELMET);
+                        entries.add(ModItems.LUNITE_CHESTPLATE);
+                        entries.add(ModItems.LUNITE_LEGGINGS);
+                        entries.add(ModItems.LUNITE_BOOTS);
+
                         entries.add(ModBlocks.LUNITE_ORE);
                         entries.add(ModBlocks.DEEPSLATE_LUNITE_ORE);
                         entries.add(ModBlocks.LUNITE_BLOCK);
                         entries.add(ModBlocks.RAW_LUNITE_BLOCK);
+
                     })
                     .build());
+
 
     public static void registerItemGroups() {
         EchoesOfTheStray.LOGGER.info("Registering Item Groups for " + EchoesOfTheStray.MOD_ID);
