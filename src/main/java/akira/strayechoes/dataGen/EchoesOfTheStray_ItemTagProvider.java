@@ -17,22 +17,22 @@ public class EchoesOfTheStray_ItemTagProvider extends FabricTagProvider.ItemTagP
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(EchoesOfTheStray_Tags.Items.TRANSFORMABLE_ITEMS)
-                .add(ModItems.RAW_LUNITE);
+                .add(ModItems.LUNITE.raw());
 
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
-                .add(ModItems.LUNITE_SWORD);
+                .add(ModItems.LUNITE.sword());
 
         getOrCreateTagBuilder(ItemTags.AXES)
-                .add(ModItems.LUNITE_AXE);
+                .add(ModItems.LUNITE.axe());
 
         getOrCreateTagBuilder(ItemTags.PICKAXES)
-                .add(ModItems.LUNITE_PICKAXE);
+                .add(ModItems.LUNITE.pickaxe());
 
         getOrCreateTagBuilder(ItemTags.SHOVELS)
-                .add(ModItems.LUNITE_SHOVEL);
+                .add(ModItems.LUNITE.shovel());
 
         getOrCreateTagBuilder(ItemTags.HOES)
-                .add(ModItems.LUNITE_HOE);
+                .add(ModItems.LUNITE.hoe());
     }
 }
