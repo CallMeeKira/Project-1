@@ -25,6 +25,14 @@ import java.util.Map;
 public class ModBlocks {
     static final Map<RegistryKey<ItemGroup>, List<Block>> _groupedBlocks = new HashMap<>();
 
+    public static final Block NOCTOFERN = registerBlock("noctofern",
+            new ShortPlantBlock(AbstractBlock.Settings.create().noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS)),
+            ItemGroups.NATURAL);
+
+    public static final Block ZORDYCEPS = registerBlock("zordyceps",
+            new ShortPlantBlock(AbstractBlock.Settings.create().noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS)),
+            ItemGroups.NATURAL);
+
     public static final Block LUNITE_BLOCK = registerBlock("lunite_block",
             new Block(AbstractBlock.Settings.create().strength(5f).requiresTool().sounds(BlockSoundGroup.METAL)),
             ItemGroups.BUILDING_BLOCKS);
