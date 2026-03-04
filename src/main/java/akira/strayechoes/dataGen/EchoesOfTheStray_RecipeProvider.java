@@ -29,105 +29,105 @@ public class EchoesOfTheStray_RecipeProvider extends FabricRecipeProvider {
                 //ITEM_TO_INGOT
                 List<ItemConvertible> LUNITE_INGOT_SMELTABLES = List.of(
                         //ITEMS
-                        ModItems.RAW_LUNITE,
+                        ModItems.LUNITE.raw(),
 
                         //BLOCKS
                         ModBlocks.LUNITE_ORE,
                         ModBlocks.DEEPSLATE_LUNITE_ORE);
 
-                offerSmelting(recipeExporter, LUNITE_INGOT_SMELTABLES, RecipeCategory.MISC, ModItems.LUNITE_INGOT, 0.25f, 200, "Echoes_Of_The_Stray_Group");
-                offerBlasting(recipeExporter, LUNITE_INGOT_SMELTABLES, RecipeCategory.MISC, ModItems.LUNITE_INGOT, 0.25f, 100, "Echoes_Of_The_Stray_Group");
+                offerSmelting(recipeExporter, LUNITE_INGOT_SMELTABLES, RecipeCategory.MISC, ModItems.LUNITE.ingot(), 0.25f, 200, "Echoes_Of_The_Stray_Group");
+                offerBlasting(recipeExporter, LUNITE_INGOT_SMELTABLES, RecipeCategory.MISC, ModItems.LUNITE.ingot(), 0.25f, 100, "Echoes_Of_The_Stray_Group");
 
                 //ITEM_TO_NUGGET
                 List<ItemConvertible> LUNITE_NUGGET_SMELTABLES = List.of(
                         //ITEMS
-                        ModItems.LUNITE_SHOVEL,
-                        ModItems.LUNITE_AXE,
-                        ModItems.LUNITE_SWORD,
-                        ModItems.LUNITE_PICKAXE,
-                        ModItems.LUNITE_HOE);
+                        ModItems.LUNITE.shovel(),
+                        ModItems.LUNITE.axe(),
+                        ModItems.LUNITE.sword(),
+                        ModItems.LUNITE.pickaxe(),
+                        ModItems.LUNITE.hoe());
 
-                offerSmelting(recipeExporter, LUNITE_NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.LUNITE_NUGGET, 0.25f, 200, "Echoes_Of_The_Stray_Group");
-                offerBlasting(recipeExporter, LUNITE_NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.LUNITE_NUGGET, 0.25f, 100, "Echoes_Of_The_Stray_Group");
+                offerSmelting(recipeExporter, LUNITE_NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.LUNITE.nugget(), 0.25f, 200, "Echoes_Of_The_Stray_Group");
+                offerBlasting(recipeExporter, LUNITE_NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.LUNITE.nugget(), 0.25f, 100, "Echoes_Of_The_Stray_Group");
 
 
         //CRAFTING TABLE BASED RECIPES
             //Reversible Compacts
-            offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModItems.LUNITE_INGOT, RecipeCategory.DECORATIONS, ModBlocks.LUNITE_BLOCK);
+            offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModItems.LUNITE.ingot(), RecipeCategory.DECORATIONS, ModBlocks.LUNITE_BLOCK);
 
             //Below recipe currently returns a "Duplicate recipe" error, looking into it
-            //offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.MISC, ModItems.LUNITE_NUGGET, RecipeCategory.MISC, ModItems.LUNITE_INGOT);
+            //offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.MISC, ModItems.LUNITE.nugget(), RecipeCategory.MISC, ModItems.LUNITE.ingot());
 
             //Shapeless decomposition
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LUNITE_NUGGET, 9)
-                    .input(ModItems.LUNITE_INGOT)
-                    .criterion(hasItem(ModItems.LUNITE_INGOT), conditionsFromItem(ModItems.LUNITE_INGOT))
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LUNITE.nugget(), 9)
+                    .input(ModItems.LUNITE.ingot())
+                    .criterion(hasItem(ModItems.LUNITE.ingot()), conditionsFromItem(ModItems.LUNITE.ingot()))
                     .offerTo(recipeExporter);
 
             //Shaped (Tools)
                 //Category Tools
-                ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNITE_PICKAXE)
+                ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNITE.pickaxe())
                         .pattern("NNN")
                         .pattern(" S ")
                         .pattern(" S ")
-                        .input('N', ModItems.LUNITE_INGOT)
+                        .input('N', ModItems.LUNITE.ingot())
                         .input('S', Items.STICK)
-                        .criterion(hasItem(ModItems.LUNITE_INGOT), conditionsFromItem(ModItems.LUNITE_INGOT))
+                        .criterion(hasItem(ModItems.LUNITE.ingot()), conditionsFromItem(ModItems.LUNITE.ingot()))
                         .offerTo(recipeExporter);
 
-                ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNITE_SHOVEL)
+                ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNITE.shovel())
                         .pattern(" N ")
                         .pattern(" S ")
                         .pattern(" S ")
-                        .input('N', ModItems.LUNITE_INGOT)
+                        .input('N', ModItems.LUNITE.ingot())
                         .input('S', Items.STICK)
-                        .criterion(hasItem(ModItems.LUNITE_INGOT), conditionsFromItem(ModItems.LUNITE_INGOT))
+                        .criterion(hasItem(ModItems.LUNITE.ingot()), conditionsFromItem(ModItems.LUNITE.ingot()))
                         .offerTo(recipeExporter);
 
-                ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNITE_AXE)
+                ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNITE.axe())
                         .pattern("NN ")
                         .pattern("NS ")
                         .pattern(" S ")
-                        .input('N', ModItems.LUNITE_INGOT)
+                        .input('N', ModItems.LUNITE.ingot())
                         .input('S', Items.STICK)
-                        .criterion(hasItem(ModItems.LUNITE_INGOT), conditionsFromItem(ModItems.LUNITE_INGOT))
+                        .criterion(hasItem(ModItems.LUNITE.ingot()), conditionsFromItem(ModItems.LUNITE.ingot()))
                         .offerTo(recipeExporter, Identifier.of(EchoesOfTheStray.MOD_ID, "lunite_axe_category_tools"));
 
-                ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNITE_HOE)
+                ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.LUNITE.hoe())
                         .pattern("NN ")
                         .pattern(" S ")
                         .pattern(" S ")
-                        .input('N', ModItems.LUNITE_INGOT)
+                        .input('N', ModItems.LUNITE.ingot())
                         .input('S', Items.STICK)
-                        .criterion(hasItem(ModItems.LUNITE_INGOT), conditionsFromItem(ModItems.LUNITE_INGOT))
+                        .criterion(hasItem(ModItems.LUNITE.ingot()), conditionsFromItem(ModItems.LUNITE.ingot()))
                         .offerTo(recipeExporter);
 
                 //Category Combat
-                ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.LUNITE_SWORD)
+                ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.LUNITE.sword())
                         .pattern("N  ")
                         .pattern(" N ")
                         .pattern("  S")
-                        .input('N', ModItems.LUNITE_INGOT)
+                        .input('N', ModItems.LUNITE.ingot())
                         .input('S', Items.STICK)
-                        .criterion(hasItem(ModItems.LUNITE_INGOT), conditionsFromItem(ModItems.LUNITE_INGOT))
+                        .criterion(hasItem(ModItems.LUNITE.ingot()), conditionsFromItem(ModItems.LUNITE.ingot()))
                         .offerTo(recipeExporter, Identifier.of(EchoesOfTheStray.MOD_ID, "lunite_sword_diagonal"));
 
-                ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.LUNITE_SWORD)
+                ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.LUNITE.sword())
                     .pattern(" N ")
                     .pattern(" N ")
                     .pattern(" S ")
-                    .input('N', ModItems.LUNITE_INGOT)
+                    .input('N', ModItems.LUNITE.ingot())
                     .input('S', Items.STICK)
-                    .criterion(hasItem(ModItems.LUNITE_INGOT), conditionsFromItem(ModItems.LUNITE_INGOT))
+                    .criterion(hasItem(ModItems.LUNITE.ingot()), conditionsFromItem(ModItems.LUNITE.ingot()))
                     .offerTo(recipeExporter, Identifier.of(EchoesOfTheStray.MOD_ID, "lunite_sword_vertical"));
 
-                ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.LUNITE_AXE)
+                ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.LUNITE.axe())
                         .pattern("NN ")
                         .pattern("NS ")
                         .pattern(" S ")
-                        .input('N', ModItems.LUNITE_INGOT)
+                        .input('N', ModItems.LUNITE.ingot())
                         .input('S', Items.STICK)
-                        .criterion(hasItem(ModItems.LUNITE_INGOT), conditionsFromItem(ModItems.LUNITE_INGOT))
+                        .criterion(hasItem(ModItems.LUNITE.ingot()), conditionsFromItem(ModItems.LUNITE.ingot()))
                         .offerTo(recipeExporter, Identifier.of(EchoesOfTheStray.MOD_ID, "lunite_axe_category_combat"));
     }
 }

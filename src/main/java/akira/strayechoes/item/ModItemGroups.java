@@ -13,28 +13,28 @@ import net.minecraft.util.Identifier;
 public class ModItemGroups {
     public static final ItemGroup ECHOES_OF_THE_STRAY_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(EchoesOfTheStray.MOD_ID, "echoes_of_the_stray"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.LUNITE_INGOT))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.LUNITE.ingot()))
                     .displayName(Text.translatable("itemgroup.strayechoes.echoes_of_the_stray"))
                     .entries((displayContext, entries) -> {
-                        entries.add(ModItems.LUNITE_INGOT);
-                        entries.add(ModItems.RAW_LUNITE);
-                        entries.add(ModItems.LUNITE_NUGGET);
+                        entries.add(ModItems.LUNITE.ingot());
+                        entries.add(ModItems.LUNITE.raw());
+                        entries.add(ModItems.LUNITE.nugget());
 
-                        entries.add(ModItems.LUNITE_HELMET);
-                        entries.add(ModItems.LUNITE_CHESTPLATE);
-                        entries.add(ModItems.LUNITE_LEGGINGS);
-                        entries.add(ModItems.LUNITE_BOOTS);
+                        entries.add(ModItems.LUNITE.helmet());
+                        entries.add(ModItems.LUNITE.chestplate());
+                        entries.add(ModItems.LUNITE.leggings());
+                        entries.add(ModItems.LUNITE.boots());
 
                         entries.add(ModBlocks.LUNITE_ORE);
                         entries.add(ModBlocks.DEEPSLATE_LUNITE_ORE);
                         entries.add(ModBlocks.LUNITE_BLOCK);
                         entries.add(ModBlocks.RAW_LUNITE_BLOCK);
 
-                        entries.add(ModItems.LUNITE_SWORD);
-                        entries.add(ModItems.LUNITE_AXE);
-                        entries.add(ModItems.LUNITE_PICKAXE);
-                        entries.add(ModItems.LUNITE_SHOVEL);
-                        entries.add(ModItems.LUNITE_HOE);
+                        entries.add(ModItems.LUNITE.sword());
+                        entries.add(ModItems.LUNITE.axe());
+                        entries.add(ModItems.LUNITE.pickaxe());
+                        entries.add(ModItems.LUNITE.shovel());
+                        entries.add(ModItems.LUNITE.hoe());
                     })
                     .build());
 

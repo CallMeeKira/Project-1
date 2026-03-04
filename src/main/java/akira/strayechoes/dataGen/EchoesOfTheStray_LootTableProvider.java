@@ -20,7 +20,7 @@ public class EchoesOfTheStray_LootTableProvider extends FabricBlockLootTableProv
         addDrop(ModBlocks.RAW_LUNITE_BLOCK);
 
         //Ore Drops
-        addDrop(ModBlocks.LUNITE_ORE, oreDrops(ModBlocks.LUNITE_ORE, ModItems.RAW_LUNITE));
-        addDrop(ModBlocks.DEEPSLATE_LUNITE_ORE, oreDrops(ModBlocks.DEEPSLATE_LUNITE_ORE, ModItems.RAW_LUNITE));
+        addDrop(ModBlocks.LUNITE_ORE, oreDrops(ModBlocks.LUNITE_ORE, ModItems.LUNITE.raw()));
+        addDrop(ModBlocks.DEEPSLATE_LUNITE_ORE, oreDrops(ModBlocks.DEEPSLATE_LUNITE_ORE, ModItems.LUNITE.raw()));
     }
 }
