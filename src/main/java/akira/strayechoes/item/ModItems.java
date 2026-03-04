@@ -2,10 +2,7 @@ package akira.strayechoes.item;
 
 import akira.strayechoes.EchoesOfTheStray;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -37,14 +34,48 @@ public class ModItems {
             ItemGroups.INGREDIENTS
     );
 
-    public static final Item LUNITE_SWORD = registerItem("lunite_sword", new SwordItem(ModToolMaterials.LUNITE, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.LUNITE, 3, -2.4f))));
-    public static final Item LUNITE_PICKAXE = registerItem("lunite_pickaxe", new PickaxeItem(ModToolMaterials.LUNITE, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.LUNITE, 1, -2.8f))));
-    public static final Item LUNITE_SHOVEL = registerItem("lunite_shovel", new ShovelItem(ModToolMaterials.LUNITE, new Item.Settings().attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.LUNITE, 1.5f, -3.0f))));
-    public static final Item LUNITE_AXE = registerItem("lunite_axe", new AxeItem(ModToolMaterials.LUNITE, new Item.Settings().attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.LUNITE, 6f, -3.2f))));
-    public static final Item LUNITE_HOE = registerItem("lunite_hoe", new HoeItem(ModToolMaterials.LUNITE, new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.LUNITE, 0f, -3f))));
+    public static final Item LUNITE_SWORD = registerItem(
+            "lunite_sword",
+            new SwordItem(
+                    ModToolMaterials.LUNITE,
+                    new Item.Settings()
+                            .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.LUNITE, 3, -2.4f)))
+    );
+
+    public static final Item LUNITE_PICKAXE = registerItem(
+            "lunite_pickaxe",
+            new PickaxeItem(
+                    ModToolMaterials.LUNITE,
+                    new Item.Settings()
+                            .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.LUNITE, 1, -2.8f)))
+    );
+
+    public static final Item LUNITE_SHOVEL = registerItem(
+            "lunite_shovel",
+            new ShovelItem(
+                    ModToolMaterials.LUNITE,
+                    new Item.Settings()
+                            .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.LUNITE, 1.5f, -3.0f)))
+    );
+
+    public static final Item LUNITE_AXE = registerItem(
+            "lunite_axe",
+            new AxeItem(
+                    ModToolMaterials.LUNITE,
+                    new Item.Settings()
+                            .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.LUNITE, 6f, -3.2f)))
+    );
+
+    public static final Item LUNITE_HOE = registerItem(
+            "lunite_hoe",
+            new HoeItem(
+                    ModToolMaterials.LUNITE,
+                    new Item.Settings()
+                            .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.LUNITE, 0f, -3f)))
+    );
 
     private static Item registerItem(String name, Item item) {
-        Registry.register(Registries.ITEM, Identifier.of(EchoesOfTheStray.MOD_ID, name), item);
+        return Registry.register(Registries.ITEM, Identifier.of(EchoesOfTheStray.MOD_ID, name), item);
     }
 
     public static final Item LUNITE_HELMET = registerItem(
