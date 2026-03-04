@@ -1,6 +1,7 @@
 package akira.strayechoes.dataGen;
 
 import akira.strayechoes.block.ModBlocks;
+import akira.strayechoes.utils.EchoesOfTheStray_Tags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -23,5 +24,8 @@ public class EchoesOfTheStray_BlockTagProvider extends FabricTagProvider.BlockTa
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.DEEPSLATE_LUNITE_ORE);
+
+        getOrCreateTagBuilder(EchoesOfTheStray_Tags.Blocks.NEEDS_LUNITE_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
     }
 }

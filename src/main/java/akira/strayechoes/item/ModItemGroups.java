@@ -24,6 +24,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DEEPSLATE_LUNITE_ORE);
                         entries.add(ModBlocks.LUNITE_BLOCK);
                         entries.add(ModBlocks.RAW_LUNITE_BLOCK);
+
+                        entries.add(ModItems.LUNITE_SWORD);
+                        entries.add(ModItems.LUNITE_AXE);
+                        entries.add(ModItems.LUNITE_PICKAXE);
+                        entries.add(ModItems.LUNITE_SHOVEL);
+                        entries.add(ModItems.LUNITE_HOE);
                     })
                     .build());
 

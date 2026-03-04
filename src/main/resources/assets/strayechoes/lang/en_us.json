@@ -3,6 +3,12 @@
   "item.strayechoes.raw_lunite": "Raw Lunite",
   "item.strayechoes.lunite_nugget": "Lunite Nugget",
 
+  "item.strayechoes.lunite_sword": "Lunite Sword",
+  "item.strayechoes.lunite_axe": "Lunite Axe",
+  "item.strayechoes.lunite_pickaxe": "Lunite Pickaxe",
+  "item.strayechoes.lunite_shovel": "Lunite Shovel",
+  "item.strayechoes.lunite_hoe": "Lunite Hoe",
+
   "block.strayechoes.lunite_block": "Block of Lunite",
   "block.strayechoes.raw_lunite_block": "Block of Raw Lunite",
   "block.strayechoes.lunite_ore": "Lunite Ore",

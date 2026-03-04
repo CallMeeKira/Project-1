@@ -9,6 +9,8 @@ import net.minecraft.util.Identifier;
 
 public class EchoesOfTheStray_Tags {
     public static class Blocks{
+        public static final TagKey<Block> NEEDS_LUNITE_TOOL = createTag("needs_lunite_tool");
+        public static final TagKey<Block> INCORRECT_FOR_LUNITE_TOOL = createTag("incorrect_for_lunite_tool");
 
         private static TagKey<Block> createTag(String name){
            return TagKey.of(RegistryKeys.BLOCK, Identifier.of(EchoesOfTheStray.MOD_ID, name));

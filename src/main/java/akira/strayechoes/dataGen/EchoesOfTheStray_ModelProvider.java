@@ -26,5 +26,11 @@ public class EchoesOfTheStray_ModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.LUNITE_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.LUNITE_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_LUNITE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.LUNITE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.LUNITE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.LUNITE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.LUNITE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.LUNITE_HOE, Models.HANDHELD);
     }
 }
