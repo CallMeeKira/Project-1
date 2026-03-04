@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "strayechoes:lunite_ingot"
+    }
+  },
+  "result": {
+    "id": "strayechoes:lunite_boots",
+    "count": 1
+  }
+}

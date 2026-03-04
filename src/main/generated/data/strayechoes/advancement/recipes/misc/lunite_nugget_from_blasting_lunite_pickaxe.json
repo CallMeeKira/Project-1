@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lunite_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "strayechoes:lunite_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:lunite_nugget_from_blasting_lunite_pickaxe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lunite_pickaxe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:lunite_nugget_from_blasting_lunite_pickaxe"
+    ]
+  }
+}

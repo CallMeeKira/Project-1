@@ -1,0 +1,4 @@
+// 1.21	2026-03-04T16:20:22.5821376	Echoes of the Stray/Tags for minecraft:block
+fc59e3e8c999247d7258e9cf47c7a79ef93c38a9 data\minecraft\tags\block\mineable\pickaxe.json
+8d14e38bcbd80aa6af399b3751017733794ab22f data\minecraft\tags\block\needs_iron_tool.json
+32b13946c4cd1f944b029659ccce5fcb2adad4ff data\strayechoes\tags\block\needs_lunite_tool.json

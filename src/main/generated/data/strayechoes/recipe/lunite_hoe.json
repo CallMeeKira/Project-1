@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": {
+      "item": "strayechoes:lunite_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "NN ",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "strayechoes:lunite_hoe"
+  }
+}

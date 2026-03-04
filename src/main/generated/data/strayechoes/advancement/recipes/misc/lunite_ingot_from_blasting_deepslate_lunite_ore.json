@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslate_lunite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "strayechoes:deepslate_lunite_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:lunite_ingot_from_blasting_deepslate_lunite_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslate_lunite_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:lunite_ingot_from_blasting_deepslate_lunite_ore"
+    ]
+  }
+}

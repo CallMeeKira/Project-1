@@ -2,28 +2,60 @@ package akira.strayechoes.item;
 
 import akira.strayechoes.EchoesOfTheStray;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class ModItems {
-    public static final Item LUNITE_INGOT = registerItem("lunite_ingot", new Item(new Item.Settings()));
-    public static final Item RAW_LUNITE = registerItem("raw_lunite", new Item(new Item.Settings()));
-    public static final Item LUNITE_NUGGET = registerItem("lunite_nugget", new Item(new Item.Settings()));
+    static final Map<RegistryKey<ItemGroup>, List<Item>> _groupedItems = new HashMap<>();
+
+    public static final MetalSet LUNITE = registerMetalSet("lunite", ModToolMaterials.LUNITE, ModArmorMaterials.LUNITE, 15);
+
+    private static MetalSet registerMetalSet(String name, ToolMaterial toolMat, RegistryEntry<ArmorMaterial> armorMat, int armorDurability) {
+        return new MetalSet(
+                registerItem(name + "_ingot",     new Item(new Item.Settings()),                                                                                                         ItemGroups.INGREDIENTS),
+                registerItem("raw_" + name,       new Item(new Item.Settings()),                                                                                                         ItemGroups.INGREDIENTS),
+                registerItem(name + "_nugget",    new Item(new Item.Settings()),                                                                                                         ItemGroups.INGREDIENTS),
+                registerItem(name + "_sword",     new SwordItem(toolMat,   new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(toolMat,    3,    -2.4f)))),
+                registerItem(name + "_pickaxe",   new PickaxeItem(toolMat, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(toolMat,  1,    -2.8f)))),
+                registerItem(name + "_shovel",    new ShovelItem(toolMat,  new Item.Settings().attributeModifiers(ShovelItem.createAttributeModifiers(toolMat,   1.5f, -3.0f)))),
+                registerItem(name + "_axe",       new AxeItem(toolMat,     new Item.Settings().attributeModifiers(AxeItem.createAttributeModifiers(toolMat,      6f,   -3.2f)))),
+                registerItem(name + "_hoe",       new HoeItem(toolMat,     new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(toolMat,      0f,   -3f)))),
+                registerItem(name + "_helmet",     new ArmorItem(armorMat, ArmorItem.Type.HELMET,     new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(armorDurability))),     ItemGroups.COMBAT),
+                registerItem(name + "_chestplate", new ArmorItem(armorMat, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(armorDurability))), ItemGroups.COMBAT),
+                registerItem(name + "_leggings",   new ArmorItem(armorMat, ArmorItem.Type.LEGGINGS,   new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(armorDurability))),   ItemGroups.COMBAT),
+                registerItem(name + "_boots",      new ArmorItem(armorMat, ArmorItem.Type.BOOTS,      new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(armorDurability))),      ItemGroups.COMBAT)
+        );
+    }
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(EchoesOfTheStray.MOD_ID, name), item);
     }
 
+    static Item registerItem(String name, Item item, RegistryKey<ItemGroup> group) {
+        Item registered = Registry.register(Registries.ITEM, Identifier.of(EchoesOfTheStray.MOD_ID, name), item);
+        _groupedItems.computeIfAbsent(group, itemGroup -> new ArrayList<>()).add(registered);
+        return registered;
+    }
+
     public static void registerModItems() {
         EchoesOfTheStray.LOGGER.info("Registering Mod Items for " + EchoesOfTheStray.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(LUNITE_INGOT);
-            entries.add(RAW_LUNITE);
-            entries.add(LUNITE_NUGGET);
-        });
+        for (var entry : _groupedItems.entrySet()) {
+            RegistryKey<ItemGroup> group = entry.getKey();
+            List<Item> items = entry.getValue();
+
+            ItemGroupEvents.modifyEntriesEvent(group).register(entries -> {
+                for (Item item : items) entries.add(item);
+            });
+        }
     }
 }
