@@ -4,8 +4,6 @@ import akira.strayechoes.block.ModBlocks;
 import akira.strayechoes.item.ModItemGroups;
 import akira.strayechoes.item.ModItems;
 import net.fabricmc.api.ModInitializer;
-
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

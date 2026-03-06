@@ -25,6 +25,7 @@ public class EchoesOfTheStray_RecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter recipeExporter) {
         //FURNACE BASED RECIPES
+            // !! XP values have been adjusted in the recipe files to match vanilla. Not sure what to do here, so im leaving this alone. -Akira
             //Smelting
                 //ITEM_TO_INGOT
                 List<ItemConvertible> LUNITE_INGOT_SMELTABLES = List.of(
@@ -57,6 +58,8 @@ public class EchoesOfTheStray_RecipeProvider extends FabricRecipeProvider {
 
             //Below recipe currently returns a "Duplicate recipe" error, looking into it
             //offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.MISC, ModItems.LUNITE.nugget(), RecipeCategory.MISC, ModItems.LUNITE.ingot());
+                    // !! Ingots have been moved to Misc and the block to Building Blocks, as those are their vanilla categories. -Akira
+
 
             //Shapeless decomposition
             ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LUNITE.nugget(), 9)
@@ -103,6 +106,7 @@ public class EchoesOfTheStray_RecipeProvider extends FabricRecipeProvider {
                         .offerTo(recipeExporter);
 
                 //Category Combat
+                    // !! Removed diagonal from recipes, not available as an option in vanilla. Renamed vertical to just lunite_sword. Did not touch advancements. -Akira
                 ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.LUNITE.sword())
                         .pattern("N  ")
                         .pattern(" N ")

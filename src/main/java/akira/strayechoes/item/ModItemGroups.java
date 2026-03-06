@@ -29,6 +29,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DEEPSLATE_LUNITE_ORE);
                         entries.add(ModBlocks.LUNITE_BLOCK);
                         entries.add(ModBlocks.RAW_LUNITE_BLOCK);
+                        entries.add(ModBlocks.NOCTOFERN);
+                        entries.add(ModBlocks.ZORDYCEPS);
 
                         entries.add(ModItems.LUNITE.sword());
                         entries.add(ModItems.LUNITE.axe());

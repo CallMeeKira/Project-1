@@ -2,12 +2,12 @@
   "type": "minecraft:blasting",
   "category": "misc",
   "cookingtime": 100,
-  "experience": 0.7,
+  "experience": 0.1,
   "group": "Echoes_Of_The_Stray_Group",
   "ingredient": {
-    "item": "strayechoes:deepslate_lunite_ore"
+    "item": "strayechoes:lunite_chestplate"
   },
   "result": {
-    "id": "strayechoes:lunite_ingot"
+    "id": "strayechoes:lunite_nugget"
   }
 }

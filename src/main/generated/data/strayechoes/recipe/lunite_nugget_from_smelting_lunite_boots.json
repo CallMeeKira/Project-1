@@ -2,12 +2,12 @@
   "type": "minecraft:smelting",
   "category": "misc",
   "cookingtime": 200,
-  "experience": 0.7,
+  "experience": 0.1,
   "group": "Echoes_Of_The_Stray_Group",
   "ingredient": {
-    "item": "strayechoes:lunite_ore"
+    "item": "strayechoes:lunite_boots"
   },
   "result": {
-    "id": "strayechoes:lunite_ingot"
+    "id": "strayechoes:lunite_nugget"
   }
 }

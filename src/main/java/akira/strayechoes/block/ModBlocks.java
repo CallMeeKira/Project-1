@@ -30,7 +30,7 @@ public class ModBlocks {
             ItemGroups.NATURAL);
 
     public static final Block ZORDYCEPS = registerBlock("zordyceps",
-            new ShortPlantBlock(AbstractBlock.Settings.create().noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS)),
+            new ShortPlantBlock(AbstractBlock.Settings.create().noCollision().breakInstantly().sounds(BlockSoundGroup.NETHER_WART)),
             ItemGroups.NATURAL);
 
     public static final Block LUNITE_BLOCK = registerBlock("lunite_block",
