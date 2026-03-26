@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/vine",
+  "textures": {
+    "vine": "strayechoes:block/lunar_vine",
+    "particle": "strayechoes:block/lunar_vine"
+  }
+}

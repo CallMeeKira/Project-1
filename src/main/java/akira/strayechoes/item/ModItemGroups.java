@@ -31,6 +31,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RAW_LUNITE_BLOCK);
                         entries.add(ModBlocks.NOCTOFERN);
                         entries.add(ModBlocks.ZORDYCEPS);
+                        entries.add(ModBlocks.LUNAR_VINE);
 
                         entries.add(ModItems.LUNITE.sword());
                         entries.add(ModItems.LUNITE.axe());

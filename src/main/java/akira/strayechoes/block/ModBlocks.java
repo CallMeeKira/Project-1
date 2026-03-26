@@ -16,6 +16,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.gen.feature.VinesFeature;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,6 +48,10 @@ public class ModBlocks {
 
     public static final Block DEEPSLATE_LUNITE_ORE = registerBlock("deepslate_lunite_ore",
             new Block(AbstractBlock.Settings.create().strength(4.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)),
+            ItemGroups.NATURAL);
+
+    public static final Block LUNAR_VINE = registerBlock("lunar_vine",
+            new VineBlock(AbstractBlock.Settings.copy(Blocks.VINE)),
             ItemGroups.NATURAL);
 
     private static Block registerBlock(String name, Block block, RegistryKey<ItemGroup> group) {

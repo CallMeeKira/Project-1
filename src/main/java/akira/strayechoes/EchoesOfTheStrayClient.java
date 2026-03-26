@@ -10,5 +10,6 @@ public class EchoesOfTheStrayClient implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NOCTOFERN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ZORDYCEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LUNAR_VINE, RenderLayer.getCutout());
     }
 }
